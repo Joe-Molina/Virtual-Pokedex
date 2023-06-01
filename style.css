@@ -1,0 +1,199 @@
+:root {
+    --font : 'VT323', monospace;
+    --main-color: #2B2C2F;
+    --second-main-color: #3C3D44;
+    --margin-color: #626574;
+    --hover-margin-color: #648FFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.header {
+    width: 100%;
+    height: 7vh;
+    background-color: var(--hover-margin-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header .logo{
+    font-family: var(--font);
+    color: aliceblue;
+    font-size: 3rem;
+}
+
+header nav {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+header nav p a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.all-container {
+    width: 90%;
+    height: 93vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-container .no-definido {
+    width: 100%;
+    height: 80px;
+    margin: 2px 0;
+    background-color: var(--second-main-color);
+}
+
+.app{
+    display: flex;
+    width: 100%;
+    height:80%;
+    box-sizing: border-box;
+}
+
+.app .buscar-pokemon-article{
+    width: 30%;
+    height: 100%;
+    margin-right: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.app .buscar-pokemon-article .buscar-tipo {
+    width: 100%;
+    margin-bottom: 2px;
+    height: 20%;
+    background-color: var(--second-main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app .buscar-pokemon-article .buscar-tipo button {
+    background-color: var(--main-color);
+    border: none;
+    border: thin solid var(--margin-color);
+    width: 11%;
+    height: 50px;
+    margin: 0;
+}
+
+.app .buscar-pokemon-article .buscar-tipo button:hover {
+    border: thin solid var(--hover-margin-color);
+}
+
+.app .buscar-pokemon-article .buscar-tipo article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.app .buscar-pokemon-article .buscar-tipo .type-all{
+    color: aliceblue;
+    margin-top: 5px;
+    width: 33.33%;
+    font-size: 1.5rem;
+}
+
+.app .buscar-pokemon-article .buscar-tipo article button {
+    width: 12%;
+}
+
+.app .buscar-pokemon-article .buscar-tipo article button img {
+    width: 70%;
+}
+
+.app .buscar-pokemon-article .buscar-generacion {
+    width: 100%;
+    margin-bottom: 2px;
+    height: 10%;
+    background-color: var(--second-main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.app .buscar-pokemon-article .buscar-generacion article {
+    display: flex;
+    width: 70%;
+    height: 60%;
+}
+
+.app .buscar-pokemon-article .buscar-generacion article button {
+    background-color: var(--main-color);
+    border: 1px solid var(--margin-color);
+    width: 11%;
+    color: aliceblue;
+    font-size: 1.2rem;
+}   
+
+.app .buscar-pokemon-article .buscar-generacion .generacion-all {
+    background-color: var(--main-color);
+    width: 25%;
+    height: 60%;
+    font-size: 1.2rem;
+    border: 1px solid var(--margin-color);
+    color: aliceblue;
+}
+
+.app .buscar-pokemon-article .buscar-generacion article button:hover, .app .buscar-pokemon-article .buscar-generacion .generacion-all:hover{
+    border: 1px solid var(--hover-margin-color);
+}
+
+.app .buscar-pokemon-article .pokemons-section {
+    width: 100%;
+    height: 70%;
+    background-color: var(--second-main-color);
+    overflow: auto;
+}
+
+.app .buscar-pokemon-article .pokemons-section div{
+    display: inline-block;
+    width: 60px;
+    height: 70px;
+    margin: 10px;
+    align-self: center;
+}
+
+.app .buscar-pokemon-article .pokemons-section div img{
+    width: 100%;
+    height: 80%;
+    background-color: var(--main-color);
+    border: thin solid var(--margin-color);
+    transition: .1s;
+}
+
+.app .buscar-pokemon-article .pokemons-section div img:hover{
+    transform: scale(1.2);
+    border: thin solid var(--hover-margin-color);
+}
+
+.app .buscar-pokemon-article .pokemons-section div p{
+    width: 100%;
+    height: 20%;
+    color: aliceblue;
+}
+
+
+.app .pokemon-info{
+    width: 70%;
+    height: 100%;
+    background-color: var(--second-main-color);
+}

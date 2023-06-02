@@ -191,9 +191,59 @@ header nav p a{
     color: aliceblue;
 }
 
-
 .app .pokemon-info{
     width: 70%;
     height: 100%;
     background-color: var(--second-main-color);
+}
+
+.display-none{
+    display: none;
+}
+
+@media (max-width: 600px){
+    header nav {
+        display: none;
+    }
+    .all-container{
+        width: 100%;
+    }
+    .no-definido{
+        display: none;
+    }
+
+    .nav-buscar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 51px;
+        z-index: 999;
+        background-color: #648FFF;
+    }
+    .app {
+        flex-direction: column;
+        height: 100%;
+    }
+    .app .buscar-pokemon-article{
+        width: 100%;
+    }
+
+    .app .buscar-pokemon-article .pokemons-section {
+        height: 100%;
+    }
+    .pokemon-info{
+        display: none;
+    }
+
+    .nav-buscar .btn-tipo{
+        width: 20%;
+        height: 100%;
+    }
+
+    .nav-buscar .btn-generacion{
+        width: 20%;
+        height: 100%;
+    }
+    
 }

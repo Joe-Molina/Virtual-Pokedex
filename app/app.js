@@ -19,6 +19,11 @@ const d = document,
     };
 
     const cargarPokemons = async () => {
+
+            if (window.innerWidth < 600){
+                $('.buscar-tipo').style.display = 'none';
+                $('.buscar-generacion').style.display = 'none';
+            }
             const data = await buscarTodos()
         
                 data.forEach(pokemon => {
@@ -270,6 +275,16 @@ const d = document,
                 buscarPorGeneracion(generacion)
             }
         })
+
+        if(e.target.closest('.btn-tipo')){
+            $('.buscar-generacion').style.display = 'none';
+            $('.buscar-tipo').style.display = 'flex';
+        }
+
+        if(e.target.closest('.btn-generacion')){
+            $('.buscar-tipo').style.display = 'none';
+            $('.buscar-generacion').style.display = 'flex';
+        }
 
     });
 

@@ -241,7 +241,7 @@ header nav p a{
         height: 100%;
     }
 
-    .nav-buscar .btn-generacion{
+    .nav-buscar button{
         width: 20%;
         height: 100%;
     }

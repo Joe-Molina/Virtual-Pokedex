@@ -276,14 +276,14 @@ const d = document,
             }
         })
 
-        if(e.target.closest('.btn-tipo')){
-            $('.buscar-generacion').style.display = 'none';
+        if(e.target.closest('.btn-abrir')){
+            $('.buscar-generacion').style.display = 'flex';
             $('.buscar-tipo').style.display = 'flex';
         }
 
-        if(e.target.closest('.btn-generacion')){
+        if(e.target.closest('.btn-cerrar')){
             $('.buscar-tipo').style.display = 'none';
-            $('.buscar-generacion').style.display = 'flex';
+            $('.buscar-generacion').style.display = 'none';
         }
 
     });

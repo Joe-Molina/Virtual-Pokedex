@@ -189,6 +189,7 @@ header nav p a{
     width: 100%;
     height: 20%;
     color: aliceblue;
+    overflow: hidden;
 }
 
 .app .pokemon-info{
@@ -254,4 +255,90 @@ header nav p a{
      .display-none{
         display: none; 
     }
+
+    .pokemon-info {
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid var(--main-color);
+        color: aliceblue;
+        width: 100vw;
+    }
+
+    .pokemon-info section {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .pokemon-info-top {
+        width: 100vw;
+       margin-top: 10px;
+    }
+
+    .pokemon-info-top span{
+        width: auto;
+        height: 100%;
+    }
+    
+    .pokemon-info-img img{
+        width: 150px;
+        background-color: var(--main-color);
+        border: thin solid var(--margin-color);
+        margin-left: 10px;
+    }
+    .pokemon-info-top article{
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 10px;
+    }
+
+    .pokemon-info-top article div{
+        display: flex;
+        width: 50%;
+        height: 33.50%;
+        border: thin solid var(--margin-color);
+        background-color: var(--main-color);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pokemon-info-bot {
+        width: 100vw;
+    }
+    
+    .pokemon-info-bot .pokemon-info-estadisticas {
+        background-color: var(--main-color);
+        border: thin solid var(--margin-color);
+        width: 50%;
+        height: 100%;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .pokemon-info-bot .pokemon-info-estadisticas div{
+        width: 45%;
+        text-align: center;
+        border: thin solid var(--margin-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        margin: 5px;
+    }
+
+    .pokemon-info .pokemon-info-habilidades{
+        background-color: var(--main-color);
+        border: thin solid var(--margin-color);
+        width: 50%;
+        height: 100%;
+        margin-right: 10px;
+    }
+
+
 }

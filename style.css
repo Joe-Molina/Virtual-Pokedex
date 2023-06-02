@@ -199,14 +199,13 @@ header nav p a{
     background-color: var(--second-main-color);
 }
 
-
-
 @media (max-width: 600px){
     header nav {
         display: none;
     }
     .all-container{
         width: 100%;
+        height: 100%;
     }
     .no-definido{
         display: none;
@@ -222,28 +221,27 @@ header nav p a{
     }
     .app {
         flex-direction: column;
-        height: 100%;
+        height: 93vh;
     }
     .app .buscar-pokemon-article{
         width: 100%;
+        height: 60%;
     }
-
-    .app .buscar-pokemon-article .pokemons-section {
-        height: 100%;
-    }
-    .app .pokemon-info{
-        position: fixed;
-        bottom: 51px;
+    .app .buscar-pokemon-article .buscar-tipo{
         width: 100%;
-        height: 300px;
-        z-index: 1000;
+        height: 30%;
     }
-
+    .app .buscar-pokemon-article .buscar-generacion{
+        width: 100%;
+        height: 15%;
+    }
+    .app .buscar-pokemon-article .pokemons-section {
+        height: 55%;
+    }
     .nav-buscar .btn-tipo{
         width: 20%;
         height: 100%;
     }
-
     .nav-buscar button{
         width: 20%;
         height: 100%;
@@ -251,38 +249,30 @@ header nav p a{
         color: aliceblue;
         border: none;
     }
-    
-     .display-none{
-        display: none; 
-    }
-
-    .pokemon-info {
-        display: flex;
+    .app .pokemon-info {
+        width: 100vw;
+        height: 40%;
+        display: none;
         flex-direction: column;
         border-top: 2px solid var(--main-color);
         color: aliceblue;
-        width: 100vw;
     }
-
     .pokemon-info section {
         width: 100%;
         height: 50%;
         display: flex;
         flex-direction: row;
     }
-    
     .pokemon-info-top {
         width: 100vw;
        margin-top: 10px;
     }
-
     .pokemon-info-top span{
         width: auto;
         height: 100%;
     }
-    
     .pokemon-info-img img{
-        width: 150px;
+        width: 160px;
         background-color: var(--main-color);
         border: thin solid var(--margin-color);
         margin-left: 10px;
@@ -295,7 +285,6 @@ header nav p a{
         flex-wrap: wrap;
         margin-right: 10px;
     }
-
     .pokemon-info-top article div{
         display: flex;
         width: 50%;
@@ -305,11 +294,10 @@ header nav p a{
         align-items: center;
         justify-content: center;
     }
-
     .pokemon-info-bot {
         width: 100vw;
+        margin-bottom: 10px;
     }
-    
     .pokemon-info-bot .pokemon-info-estadisticas {
         background-color: var(--main-color);
         border: thin solid var(--margin-color);
@@ -320,7 +308,6 @@ header nav p a{
         flex-direction: row;
         flex-wrap: wrap;
     }
-
     .pokemon-info-bot .pokemon-info-estadisticas div{
         width: 45%;
         text-align: center;
@@ -331,8 +318,7 @@ header nav p a{
         border-radius: 30px;
         margin: 5px;
     }
-
-    .pokemon-info .pokemon-info-habilidades{
+    .pokemon-info-bot .pokemon-info-habilidades{
         background-color: var(--main-color);
         border: thin solid var(--margin-color);
         width: 50%;
@@ -340,5 +326,32 @@ header nav p a{
         margin-right: 10px;
     }
 
+    .pokemon-info-bot .pokemon-info-habilidades {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-}
+    .pokemon-info-bot .pokemon-info-habilidades div {
+        width: 45%;
+        text-align: center;
+        border: thin solid var(--margin-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        margin: 5px;
+        background-color: #1f2535;
+        }
+    }
+
+    .pokemon-info-bot .pokemon-info-habilidades p {
+        width: 45%;
+        text-align: center;
+        border: thin solid var(--margin-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        margin: 5px;
+        }

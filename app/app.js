@@ -20,10 +20,8 @@ const d = document,
 
     const cargarPokemons = async () => {
 
-            if (window.innerWidth < 600){
-                $('.buscar-tipo').style.display = 'none';
-                $('.buscar-generacion').style.display = 'none';
-            }
+        $('.pokemon-info').style.display = 'none';  
+
             const data = await buscarTodos()
         
                 data.forEach(pokemon => {
@@ -251,6 +249,7 @@ const d = document,
             $('.pokemon-info-estadisticas .pokemon-info-atqEsp p').textContent =  `Ataque especial: ${infopokemons.estadisticas.atqEsp}`;
             $('.pokemon-info-estadisticas .pokemon-info-defEsp p').textContent =  `Defensa especial: ${infopokemons.estadisticas.defEsp}`;
             $('.pokemon-info-estadisticas .pokemon-info-speed p').textContent =  `Velocidad: ${infopokemons.estadisticas.velocidad}`;
+            $('.pokemon-seleccionado').dataset.select =  `${infopokemons.nombre}`;
             
             while ($('.pokemon-info-habilidades').firstChild) {
                 $('.pokemon-info-habilidades').removeChild($('.pokemon-info-habilidades').firstChild);
@@ -269,7 +268,11 @@ const d = document,
             $('.pokemon-info-habilidades').appendChild($fragment)
 
             
-
+            if($('.pokemon-seleccionado').dataset.select != "ninguno"){
+                $('.pokemon-info').style.display = 'flex';
+            } else {
+                $('.pokemon-info').style.display = 'none';  
+            }
         
     }
     
@@ -308,26 +311,6 @@ const d = document,
                 buscarPorGeneracion(generacion)
             }
         })
-
-        if(e.target.closest('.btn-opciones')){
-
-            if($('.buscar-generacion').style.display == 'flex'){
-                $('.buscar-generacion').style.display = 'none';
-                $('.buscar-tipo').style.display = 'none';
-            } else{
-                $('.buscar-generacion').style.display = 'flex';
-                $('.buscar-tipo').style.display = 'flex';
-            }
-        }
-
-        if(e.target.closest('.nav-buscar .btn-pokemon')){
-
-            if($('.app .pokemon-info').style.display != 'none'){
-                $('.app .pokemon-info').style.display = 'none'
-           } else {
-            $('.app .pokemon-info').style.display = 'flex'
-           }
-        }
 
     });
 

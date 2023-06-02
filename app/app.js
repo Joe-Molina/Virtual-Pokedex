@@ -7,7 +7,7 @@ const d = document,
     
     
     const buscarTodos = async () =>{
-        let res = await axios.get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1"),
+        let res = await axios.get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=10"),
             json = await res.data.results;
             
             const requests = json.map(el => axios.get(`${el.url}`));
@@ -21,6 +21,13 @@ const d = document,
     const cargarPokemons = async () => {
 
         $('.pokemon-info').style.display = 'none';  
+
+        if($('.pokemon-info').style.display == 'none') {
+            $('.buscar-pokemon-article').style.height = '100%';
+            $('.buscar-tipo').style.height = '18%';
+            $('.buscar-generacion').style.height = '9%'
+            $('.pokemons-section').style.height = '73%'
+        } 
 
             const data = await buscarTodos()
         
@@ -57,7 +64,6 @@ const d = document,
         $('.selector-tipo').dataset.tiposelected = tipo;
 
         if($('.selector-tipo').dataset.tiposelected == 'all'){
-            $('.allPokemons-title').textContent = 'all pokemons';
 
             const data = await buscarTodos()
             
@@ -272,6 +278,13 @@ const d = document,
                 $('.pokemon-info').style.display = 'flex';
             } else {
                 $('.pokemon-info').style.display = 'none';  
+            }
+
+            if($('.pokemon-info').style.display != 'none') {
+                $('.buscar-pokemon-article').style.height = '60%';
+                $('.buscar-tipo').style.height = '30%';
+                $('.buscar-generacion').style.height = '15%'
+                $('.pokemons-section').style.height = '55%'
             }
         
     }

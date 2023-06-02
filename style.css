@@ -318,6 +318,30 @@ header nav p a{
         border-radius: 30px;
         margin: 5px;
     }
+
+    .pokemon-info-bot .pokemon-info-estadisticas .pokemon-info-hp{
+        background-color: #193b1b;
+    }
+
+    .pokemon-info-bot .pokemon-info-estadisticas .pokemon-info-ataque{
+        background-color: #3d1f1f;
+    }
+
+    .pokemon-info-bot .pokemon-info-estadisticas .pokemon-info-atqEsp{
+        background-color: #3f0d0d;
+    }
+
+    .pokemon-info-bot .pokemon-info-estadisticas .pokemon-info-defensa{
+        background-color: #1f223d;
+    }
+
+    .pokemon-info-bot .pokemon-info-estadisticas .pokemon-info-defEsp{
+        background-color: #0f1338;
+    }
+    
+    .pokemon-info-bot .pokemon-info-estadisticas .pokemon-info-speed{
+        background-color: #3a3d1f;
+    }
     .pokemon-info-bot .pokemon-info-habilidades{
         background-color: var(--main-color);
         border: thin solid var(--margin-color);
@@ -325,7 +349,6 @@ header nav p a{
         height: 100%;
         margin-right: 10px;
     }
-
     .pokemon-info-bot .pokemon-info-habilidades {
         display: flex;
         flex-direction: row;
@@ -343,8 +366,6 @@ header nav p a{
         margin: 5px;
         background-color: #1f2535;
         }
-    }
-
     .pokemon-info-bot .pokemon-info-habilidades p {
         width: 45%;
         text-align: center;
@@ -355,3 +376,4 @@ header nav p a{
         border-radius: 30px;
         margin: 5px;
         }
+    }

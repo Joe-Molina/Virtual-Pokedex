@@ -20,7 +20,9 @@ const d = document,
 
     const cargarPokemons = async () => {
 
-        $('.pokemon-info').style.display = 'none';  
+        if(window.innerWidth < 600){
+            $('.pokemon-info').style.display = 'none'; 
+        } 
 
         if($('.pokemon-info').style.display == 'none') {
             $('.buscar-pokemon-article').style.height = '100%';

@@ -255,6 +255,7 @@ const d = document,
             const type = el.dataset.type;
             const type2 = el.textContent;
 
+            
             if(e.target.closest(`.type-${type}`)){
                 d.querySelectorAll('.pokemon-article').forEach( pokemon =>{
                     pokemon.remove()
@@ -276,14 +277,24 @@ const d = document,
             }
         })
 
-        if(e.target.closest('.btn-abrir')){
-            $('.buscar-generacion').style.display = 'flex';
-            $('.buscar-tipo').style.display = 'flex';
+        if(e.target.closest('.btn-opciones')){
+
+            if($('.buscar-generacion').style.display == 'flex'){
+                $('.buscar-generacion').style.display = 'none';
+                $('.buscar-tipo').style.display = 'none';
+            } else{
+                $('.buscar-generacion').style.display = 'flex';
+                $('.buscar-tipo').style.display = 'flex';
+            }
         }
 
-        if(e.target.closest('.btn-cerrar')){
-            $('.buscar-tipo').style.display = 'none';
-            $('.buscar-generacion').style.display = 'none';
+        if(e.target.closest('.nav-buscar .btn-pokemon')){
+
+            if($('.app .pokemon-info').style.display != 'none'){
+                $('.app .pokemon-info').style.display = 'none'
+           } else {
+            $('.app .pokemon-info').style.display = 'flex'
+           }
         }
 
     });

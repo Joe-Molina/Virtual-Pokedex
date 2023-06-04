@@ -44,9 +44,13 @@ const d = document,
                 d.querySelectorAll('.buscar-generacion button').forEach(el =>{
                     el.disabled = false;
                 }) 
+
+                $('.loading').style.display = 'none';
     };
 
     const burcarPorTipo = async (tipo,tipo2) =>{
+        $('.loading').style.display = 'block';
+
         d.querySelectorAll('.buscar-tipo button').forEach(el =>{
             el.disabled = true
         })
@@ -105,10 +109,13 @@ const d = document,
             el.disabled = false
         })
 
+        $('.loading').style.display = 'none';
 
     };
 
     const buscarPorGeneracion = async (generacion) =>{
+        $('.loading').style.display = 'inline';
+
         d.querySelectorAll('.buscar-generacion button').forEach(el =>{
             el.disabled = true
         })
@@ -182,6 +189,8 @@ const d = document,
          d.querySelectorAll('.buscar-tipo button').forEach(el =>{
             el.disabled = false
         })
+
+        $('.loading').style.display = 'none';
     };
 
     const infoPokemon = async (pokemon) =>{

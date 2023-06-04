@@ -7,7 +7,7 @@ const d = document,
     
     
     const buscarTodos = async () =>{
-        let res = await axios.get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=10"),
+        let res = await axios.get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1010"),
             json = await res.data.results;
             
             const requests = json.map(el => axios.get(`${el.url}`));
